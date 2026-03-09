@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en-NZ">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enrol Your Child — Gallery Music Centre</title>
+  <meta name="description" content="Enrol your child in affordable music lessons at Gallery Music Centre, Lower Hutt. Saturday morning classes from $210/year.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Nunito:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <!-- Header -->
+  <header class="site-header">
+    <nav class="nav container" aria-label="Main navigation">
+      <a href="index.html" class="nav__logo" aria-label="Gallery Music Centre — Home">
+        <svg viewBox="0 0 32 32" fill="none" aria-hidden="true">
+          <circle cx="16" cy="16" r="15" stroke="currentColor" stroke-width="2"/>
+          <path d="M12 22V12l10-2v10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="10" cy="22" r="2.5" fill="currentColor"/>
+          <circle cx="20" cy="20" r="2.5" fill="currentColor"/>
+        </svg>
+        Gallery Music
+      </a>
+      <div class="nav__overlay" aria-hidden="true"></div>
+      <ul class="nav__links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="classes.html">Classes</a></li>
+        <li><a href="orchestra.html">Orchestra</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="enrol.html" class="nav__enrol active">Enrol</a></li>
+      </ul>
+      <button class="nav__toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <!-- Page Header -->
+    <section class="page-header">
+      <div class="container">
+        <h1>Enrol Your Child</h1>
+        <p>Fill in the form below to register your interest. We'll be in touch to confirm placement and next steps.</p>
+      </div>
+    </section>
+
+    <!-- Form Section -->
+    <section class="section">
+      <div class="container">
+        <div class="form-container">
+
+          <!-- Important Info -->
+          <div class="info-box">
+            <h3>Before You Enrol</h3>
+            <ul>
+              <li>Annual contribution: $210 per class</li>
+              <li>Classes: Saturday mornings, 30 minutes each</li>
+              <li>Location: Dyer Street School, Lower Hutt</li>
+              <li>Existing students: please re-enrol via ClubHub each year</li>
+            </ul>
+          </div>
+
+          <!-- Enrolment Form -->
+          <form id="enrolment-form" action="mailto:administration@gallerymusic.org" method="post" enctype="text/plain" novalidate>
+
+            <h2 style="margin-bottom: var(--space-xl);">Parent / Guardian Details</h2>
+
+            <div class="form-group">
+              <label for="parent_name">Parent / Guardian Name <span class="required">*</span></label>
+              <input type="text" id="parent_name" name="parent_name" required autocomplete="name">
+              <span class="error-message">This field is required</span>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email <span class="required">*</span></label>
+              <input type="email" id="email" name="email" required autocomplete="email">
+              <span class="error-message">Please enter a valid email address</span>
+            </div>
+
+            <div class="form-group">
+              <label for="phone">Phone <span class="required">*</span></label>
+              <input type="tel" id="phone" name="phone" required autocomplete="tel">
+              <span class="error-message">This field is required</span>
+            </div>
+
+            <h2 style="margin-top: var(--space-2xl); margin-bottom: var(--space-xl);">Student Details</h2>
+
+            <div class="form-group">
+              <label for="student_name">Student Name <span class="required">*</span></label>
+              <input type="text" id="student_name" name="student_name" required>
+              <span class="error-message">This field is required</span>
+            </div>
+
+            <div class="form-group">
+              <label for="student_dob">Date of Birth <span class="required">*</span></label>
+              <input type="date" id="student_dob" name="student_dob" required>
+              <span class="error-message">This field is required</span>
+            </div>
+
+            <div class="form-group">
+              <label for="student_school">Student's School</label>
+              <input type="text" id="student_school" name="student_school">
+            </div>
+
+            <h2 style="margin-top: var(--space-2xl); margin-bottom: var(--space-xl);">Class Preferences</h2>
+
+            <div class="form-group">
+              <label for="preferred_instrument">Preferred Instrument <span class="required">*</span></label>
+              <select id="preferred_instrument" name="preferred_instrument" required>
+                <option value="">Select an instrument...</option>
+                <option value="Music Basics">Music Basics (Ages 5-7)</option>
+                <option value="Violin">Violin (Ages 7+)</option>
+                <option value="Cello">Cello (Ages 7+)</option>
+                <option value="Keyboard">Keyboard (Ages 7+)</option>
+                <option value="Guitar">Guitar (Ages 7+)</option>
+                <option value="Flute">Flute (Ages 10+)</option>
+                <option value="Recorder">Recorder (Ages 6.5+)</option>
+                <option value="Trumpet">Trumpet (Ages 8+)</option>
+                <option value="Drums">Drums (Ages 7+)</option>
+                <option value="Choir">Choir (Free)</option>
+                <option value="Ensemble">Ensemble (2+ years experience)</option>
+                <option value="Orchestra">Orchestra (3+ years experience)</option>
+              </select>
+              <span class="error-message">Please select an instrument</span>
+            </div>
+
+            <div class="form-group">
+              <label for="second_instrument">Second Preference (optional)</label>
+              <select id="second_instrument" name="second_instrument">
+                <option value="">No second preference</option>
+                <option value="Music Basics">Music Basics (Ages 5-7)</option>
+                <option value="Violin">Violin (Ages 7+)</option>
+                <option value="Cello">Cello (Ages 7+)</option>
+                <option value="Keyboard">Keyboard (Ages 7+)</option>
+                <option value="Guitar">Guitar (Ages 7+)</option>
+                <option value="Flute">Flute (Ages 10+)</option>
+                <option value="Recorder">Recorder (Ages 6.5+)</option>
+                <option value="Trumpet">Trumpet (Ages 8+)</option>
+                <option value="Drums">Drums (Ages 7+)</option>
+                <option value="Choir">Choir (Free)</option>
+                <option value="Ensemble">Ensemble (2+ years experience)</option>
+                <option value="Orchestra">Orchestra (3+ years experience)</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label>Has your child had any prior music tuition?</label>
+              <div class="radio-group">
+                <label><input type="radio" name="prior_tuition" value="Yes"> Yes</label>
+                <label><input type="radio" name="prior_tuition" value="No"> No</label>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="prior_tuition_details">If yes, please provide details</label>
+              <textarea id="prior_tuition_details" name="prior_tuition_details" rows="3" placeholder="e.g. 2 years of piano lessons at school"></textarea>
+            </div>
+
+            <div class="form-group">
+              <label>Does your child have access to an instrument at home?</label>
+              <div class="radio-group">
+                <label><input type="radio" name="has_instrument" value="Yes"> Yes</label>
+                <label><input type="radio" name="has_instrument" value="No"> No</label>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="additional_info">Any additional information</label>
+              <textarea id="additional_info" name="additional_info" rows="3" placeholder="Anything else we should know?"></textarea>
+            </div>
+
+            <div class="form-submit">
+              <button type="submit" class="btn btn--primary">Submit Enrolment</button>
+            </div>
+
+          </form>
+
+          <!-- Thank You Message -->
+          <div class="thank-you" aria-live="polite">
+            <h2>Thank you!</h2>
+            <p>We've received your enrolment interest. Your email client should have opened with the details &mdash; please send the email to complete your submission.</p>
+            <p style="margin-top: var(--space-md);">We'll be in touch soon to confirm placement and next steps.</p>
+            <p style="margin-top: var(--space-md); color: var(--color-text-light); font-size: var(--fs-sm);">
+              If you have questions, contact <a href="mailto:administration@gallerymusic.org">administration@gallerymusic.org</a>
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <div class="footer__brand">Gallery Music Centre</div>
+          <p>Dyer Street School, 9 Dyer Street,<br>Epuni, Lower Hutt 5011</p>
+          <p style="margin-top: var(--space-md);">Part of the Ministry of Education's<br>Out-of-Hours Music Programme</p>
+        </div>
+        <div>
+          <h4>Quick Links</h4>
+          <ul class="footer__links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="classes.html">Classes</a></li>
+            <li><a href="orchestra.html">Orchestra</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="enrol.html">Enrol</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <ul class="footer__links">
+            <li><a href="mailto:administration@gallerymusic.org">administration@gallerymusic.org</a></li>
+            <li><a href="tel:021-177-0072">021-177-0072</a></li>
+          </ul>
+          <div class="footer__social" style="margin-top: var(--space-md);">
+            <a href="https://www.facebook.com/gallerymusiccentre" target="_blank" rel="noopener noreferrer">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+              Facebook
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>&copy; 2026 Gallery Music Centre. All rights reserved.</span>
+        <span>A community music school in Lower Hutt, New Zealand</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
