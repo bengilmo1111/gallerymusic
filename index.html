@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Nunito:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -44,7 +45,11 @@
 
     <!-- Hero -->
     <section class="hero">
-      <div class="hero__decor"></div>
+      <div class="hero__decor" aria-hidden="true">
+        <div class="hero__band hero__band--hills"></div>
+        <div class="hero__band hero__band--valley"></div>
+        <div class="hero__band hero__band--river"></div>
+      </div>
       <div class="hero__notes" aria-hidden="true">
         <!-- Treble clef silhouette -->
         <svg viewBox="0 0 100 200"><path d="M52 2c-4 8-14 20-14 40s10 28 10 28l-6 10c-18-6-32-22-32-44C10 14 28 2 52 2zm0 0c4 8 14 20 14 40s-10 30-10 30v60c0 20-10 34-26 40-8 2-16 0-20-6s-2-14 4-18c8-4 18-2 22 6v-82l6-10"/></svg>

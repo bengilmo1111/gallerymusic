@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Nunito:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -48,6 +49,9 @@
         <h1>Enrol Your Child</h1>
         <p>Fill in the form below to register your interest. We'll be in touch to confirm placement and next steps.</p>
       </div>
+      <div class="page-header__wave" aria-hidden="true">
+        <svg viewBox="0 0 1440 30" preserveAspectRatio="none"><path d="M0 15C360 3 720 27 1080 15S1320 3 1440 15V30H0Z" fill="#ffffff"/></svg>
+      </div>
     </section>
 
     <!-- Form Section -->
@@ -69,46 +73,30 @@
           <!-- Enrolment Form -->
           <form id="enrolment-form" action="mailto:administration@gallerymusic.org" method="post" enctype="text/plain" novalidate>
 
-            <h2 style="margin-bottom: var(--space-xl);">Parent / Guardian Details</h2>
+            <h2 style="margin-bottom: var(--space-xl);">Enrolment Details</h2>
 
             <div class="form-group">
-              <label for="parent_name">Parent / Guardian Name <span class="required">*</span></label>
+              <label for="parent_name">Parent's Name <span class="required">*</span></label>
               <input type="text" id="parent_name" name="parent_name" required autocomplete="name">
               <span class="error-message">This field is required</span>
             </div>
 
             <div class="form-group">
-              <label for="email">Email <span class="required">*</span></label>
-              <input type="email" id="email" name="email" required autocomplete="email">
+              <label for="contact_email">Contact Email <span class="required">*</span></label>
+              <input type="email" id="contact_email" name="contact_email" required autocomplete="email">
               <span class="error-message">Please enter a valid email address</span>
             </div>
 
             <div class="form-group">
-              <label for="phone">Phone <span class="required">*</span></label>
-              <input type="tel" id="phone" name="phone" required autocomplete="tel">
-              <span class="error-message">This field is required</span>
-            </div>
-
-            <h2 style="margin-top: var(--space-2xl); margin-bottom: var(--space-xl);">Student Details</h2>
-
-            <div class="form-group">
-              <label for="student_name">Student Name <span class="required">*</span></label>
-              <input type="text" id="student_name" name="student_name" required>
-              <span class="error-message">This field is required</span>
+              <label for="contact_phone">Contact Phone Number</label>
+              <input type="tel" id="contact_phone" name="contact_phone" autocomplete="tel">
             </div>
 
             <div class="form-group">
-              <label for="student_dob">Date of Birth <span class="required">*</span></label>
-              <input type="date" id="student_dob" name="student_dob" required>
+              <label for="child_dob">Child's DOB <span class="required">*</span></label>
+              <input type="date" id="child_dob" name="child_dob" required>
               <span class="error-message">This field is required</span>
             </div>
-
-            <div class="form-group">
-              <label for="student_school">Student's School</label>
-              <input type="text" id="student_school" name="student_school">
-            </div>
-
-            <h2 style="margin-top: var(--space-2xl); margin-bottom: var(--space-xl);">Class Preferences</h2>
 
             <div class="form-group">
               <label for="preferred_instrument">Preferred Instrument <span class="required">*</span></label>
@@ -131,8 +119,8 @@
             </div>
 
             <div class="form-group">
-              <label for="second_instrument">Second Preference (optional)</label>
-              <select id="second_instrument" name="second_instrument">
+              <label for="second_preference">Second Preference</label>
+              <select id="second_preference" name="second_preference">
                 <option value="">No second preference</option>
                 <option value="Music Basics">Music Basics (Ages 5-7)</option>
                 <option value="Violin">Violin (Ages 7+)</option>
@@ -150,29 +138,8 @@
             </div>
 
             <div class="form-group">
-              <label>Has your child had any prior music tuition?</label>
-              <div class="radio-group">
-                <label><input type="radio" name="prior_tuition" value="Yes"> Yes</label>
-                <label><input type="radio" name="prior_tuition" value="No"> No</label>
-              </div>
-            </div>
-
-            <div class="form-group">
-              <label for="prior_tuition_details">If yes, please provide details</label>
-              <textarea id="prior_tuition_details" name="prior_tuition_details" rows="3" placeholder="e.g. 2 years of piano lessons at school"></textarea>
-            </div>
-
-            <div class="form-group">
-              <label>Does your child have access to an instrument at home?</label>
-              <div class="radio-group">
-                <label><input type="radio" name="has_instrument" value="Yes"> Yes</label>
-                <label><input type="radio" name="has_instrument" value="No"> No</label>
-              </div>
-            </div>
-
-            <div class="form-group">
-              <label for="additional_info">Any additional information</label>
-              <textarea id="additional_info" name="additional_info" rows="3" placeholder="Anything else we should know?"></textarea>
+              <label for="anything_else">Anything Else</label>
+              <textarea id="anything_else" name="anything_else" rows="4" placeholder="Anything else you'd like us to know"></textarea>
             </div>
 
             <div class="form-submit">
@@ -240,3 +207,4 @@
   <script src="js/main.js"></script>
 </body>
 </html>
+

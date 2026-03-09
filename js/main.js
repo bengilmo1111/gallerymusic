@@ -89,7 +89,9 @@ function initFormValidation() {
     if (!isValid) {
       // Focus the first error field
       const firstError = form.querySelector('.error');
-      if (firstError) firstError.focus();
+      if (firstError && typeof firstError.focus === 'function') {
+        firstError.focus();
+      }
       return;
     }
 
@@ -103,7 +105,7 @@ function initFormValidation() {
       }
     }
 
-    const subject = encodeURIComponent('New Enrolment - ' + (formData.get('student_name') || 'Gallery Music'));
+    const subject = encodeURIComponent('New Enrolment - ' + (formData.get('parent_name') || formData.get('contact_email') || 'Gallery Music'));
     const mailtoBody = encodeURIComponent(body);
     const mailto = `mailto:administration@gallerymusic.org?subject=${subject}&body=${mailtoBody}`;
 
