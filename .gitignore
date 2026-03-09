@@ -4,3 +4,5 @@ playwright-report/
 test-results/
 output/playwright/
 *.log
+TODO.md
+progress.md

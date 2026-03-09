@@ -359,9 +359,11 @@ h4 { font-size: var(--fs-lg); }
 
 /* --- Hero Section --- */
 .hero {
-  background: linear-gradient(165deg, #15b6f2 0%, #3ed8ff 40%, #8ce7ff 100%);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0) 34%),
+    linear-gradient(160deg, #1da8df 0%, #5cd7f8 52%, #bceecf 100%);
   color: var(--color-white);
-  padding: var(--space-4xl) 0 calc(var(--space-4xl) + 40px);
+  padding: var(--space-4xl) 0 calc(var(--space-4xl) + 28px);
   position: relative;
   overflow: hidden;
 }
@@ -370,12 +372,12 @@ h4 { font-size: var(--fs-lg); }
 .hero::before {
   content: '';
   position: absolute;
-  top: -140px;
-  right: -120px;
-  width: 520px;
-  height: 520px;
+  top: 36px;
+  right: 6%;
+  width: 260px;
+  height: 260px;
   border-radius: var(--radius-full);
-  background: radial-gradient(circle, rgba(255, 255, 196, 0.85) 0%, rgba(255, 255, 196, 0.12) 45%, rgba(255, 255, 196, 0) 70%);
+  background: radial-gradient(circle, rgba(255, 245, 189, 0.92) 0%, rgba(255, 245, 189, 0.25) 40%, rgba(255, 245, 189, 0) 72%);
   z-index: 0;
 }
 
@@ -383,8 +385,14 @@ h4 { font-size: var(--fs-lg); }
 .hero::after {
   content: '';
   position: absolute;
-  inset: 0;
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0) 45%, rgba(255, 255, 255, 0.14) 100%);
+  left: -10%;
+  right: -10%;
+  top: 22%;
+  height: 24%;
+  border-radius: 50%;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.16), rgba(255, 255, 255, 0.02));
+  opacity: 0.5;
+  transform: rotate(-4deg);
   z-index: 0;
 }
 
@@ -401,37 +409,37 @@ h4 { font-size: var(--fs-lg); }
 .hero__decor::before {
   content: '';
   position: absolute;
-  top: 9%;
+  top: 18%;
   left: -8%;
-  width: 124%;
-  height: 22%;
+  width: 116%;
+  height: 18%;
   background:
-    linear-gradient(to right, rgba(255, 255, 255, 0.22), rgba(255, 255, 255, 0.1)),
-    repeating-radial-gradient(circle at 50% 160%, rgba(255, 255, 255, 0.34) 0 2px, transparent 2px 54px);
-  opacity: 0.62;
+    linear-gradient(90deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.08)),
+    repeating-radial-gradient(circle at 50% 170%, rgba(255, 255, 255, 0.28) 0 2px, transparent 2px 54px);
+  opacity: 0.42;
   border-radius: 0 0 50% 50% / 0 0 100% 100%;
-  transform: rotate(-1.2deg);
+  transform: rotate(-2deg);
 }
 
 /* Thin ring accent — lower left */
 .hero__decor::after {
   content: '';
   position: absolute;
-  bottom: 38%;
-  left: -4%;
-  width: 108%;
+  bottom: 44%;
+  left: 8%;
+  width: 26%;
   height: 18%;
-  border-radius: 50% 50% 0 0 / 100% 100% 0 0;
-  background:
-    linear-gradient(to right, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.08)),
-    repeating-radial-gradient(circle at 50% -20%, rgba(255, 255, 255, 0.26) 0 2px, transparent 2px 46px);
-  opacity: 0.55;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 224, 132, 0.28) 0%, rgba(255, 224, 132, 0.1) 48%, rgba(255, 224, 132, 0) 72%);
+  opacity: 0.8;
+  filter: blur(2px);
 }
 
 .hero__band {
   position: absolute;
-  left: 0;
-  width: 100%;
+  left: 50%;
+  width: 125%;
+  transform: translateX(-50%);
   border-radius: 50% 50% 0 0 / 100% 100% 0 0;
   overflow: hidden;
 }
@@ -439,48 +447,59 @@ h4 { font-size: var(--fs-lg); }
 .hero__band::before {
   content: '';
   position: absolute;
-  left: 0;
-  width: 100%;
-  background: repeating-radial-gradient(circle at 50% 0, rgba(255, 255, 255, 0.52) 0 2px, transparent 2px 34px);
-  opacity: 0.5;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.16), rgba(255, 255, 255, 0));
+  opacity: 0.55;
 }
 
 .hero__band--hills {
-  bottom: 24%;
-  height: 24%;
-  background: linear-gradient(to right, #2f8b48, #53ac5a 40%, #3e9555 75%, #2b7a44);
-  box-shadow: inset 0 10px 22px rgba(11, 57, 30, 0.22);
+  bottom: 18%;
+  height: 28%;
+  background: linear-gradient(180deg, #63b968 0%, #489c55 42%, #33794b 100%);
+  box-shadow: inset 0 18px 28px rgba(255, 255, 255, 0.12);
 }
 
 .hero__band--hills::before {
-  top: 10%;
-  height: 40%;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0)),
+    radial-gradient(circle at 20% 100%, rgba(255, 255, 255, 0.18) 0 7%, transparent 7.5%),
+    radial-gradient(circle at 43% 100%, rgba(255, 255, 255, 0.14) 0 6%, transparent 6.5%),
+    radial-gradient(circle at 72% 100%, rgba(255, 255, 255, 0.16) 0 8%, transparent 8.5%);
+  opacity: 0.42;
 }
 
 .hero__band--valley {
-  bottom: 9%;
-  height: 20%;
-  background: linear-gradient(to right, #e8bf45 0%, #f1d75a 38%, #d9ad37 75%, #cc9b2a 100%);
-  box-shadow: inset 0 10px 22px rgba(130, 95, 26, 0.28);
+  bottom: 6%;
+  height: 18%;
+  width: 132%;
+  background: linear-gradient(180deg, #f3dc75 0%, #e0c454 50%, #c7a43f 100%);
+  box-shadow: inset 0 16px 26px rgba(255, 247, 203, 0.2);
 }
 
 .hero__band--valley::before {
-  top: 14%;
-  height: 38%;
-  opacity: 0.45;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0)),
+    radial-gradient(circle at 18% 100%, rgba(255, 255, 255, 0.14) 0 6%, transparent 6.5%),
+    radial-gradient(circle at 52% 100%, rgba(255, 255, 255, 0.18) 0 7%, transparent 7.5%),
+    radial-gradient(circle at 84% 100%, rgba(255, 255, 255, 0.12) 0 6%, transparent 6.5%);
+  opacity: 0.4;
 }
 
 .hero__band--river {
-  bottom: -2%;
-  height: 15%;
-  background: linear-gradient(to right, #048bd8, #11a6e9 38%, #0f9fd8 70%, #0577b8);
-  box-shadow: inset 0 8px 18px rgba(0, 70, 112, 0.25);
+  bottom: -5%;
+  height: 18%;
+  width: 138%;
+  background: linear-gradient(180deg, #4dbef2 0%, #1f9ddd 46%, #137cbc 100%);
+  box-shadow: inset 0 10px 18px rgba(255, 255, 255, 0.14);
 }
 
 .hero__band--river::before {
-  top: 18%;
-  height: 52%;
-  opacity: 0.68;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.18), rgba(255, 255, 255, 0)),
+    radial-gradient(circle at 22% 100%, rgba(255, 255, 255, 0.28) 0 5%, transparent 5.5%),
+    radial-gradient(circle at 54% 100%, rgba(255, 255, 255, 0.24) 0 4%, transparent 4.5%),
+    radial-gradient(circle at 78% 100%, rgba(255, 255, 255, 0.24) 0 5%, transparent 5.5%);
+  opacity: 0.5;
 }
 
 /* Musical note SVG silhouettes */
@@ -499,30 +518,30 @@ h4 { font-size: var(--fs-lg); }
 }
 
 .hero__notes svg:nth-child(1) {
-  top: 15%;
+  top: 18%;
   right: 8%;
-  width: 120px;
-  height: 120px;
-  transform: rotate(-15deg);
-  opacity: 0.09;
+  width: 108px;
+  height: 108px;
+  transform: rotate(-12deg);
+  opacity: 0.08;
 }
 
 .hero__notes svg:nth-child(2) {
-  bottom: 25%;
-  right: 25%;
+  bottom: 29%;
+  right: 24%;
   width: 60px;
   height: 60px;
-  transform: rotate(20deg);
-  opacity: 0.06;
+  transform: rotate(18deg);
+  opacity: 0.05;
 }
 
 .hero__notes svg:nth-child(3) {
-  top: 50%;
-  right: 4%;
-  width: 40px;
-  height: 40px;
-  transform: rotate(-30deg);
-  opacity: 0.05;
+  top: 54%;
+  right: 6%;
+  width: 34px;
+  height: 34px;
+  transform: rotate(-26deg);
+  opacity: 0.04;
 }
 
 /* Wavy bottom edge */
@@ -531,8 +550,9 @@ h4 { font-size: var(--fs-lg); }
   bottom: -1px;
   left: 0;
   width: 100%;
-  height: 40px;
+  height: 22px;
   pointer-events: none;
+  z-index: 2;
 }
 
 .hero__wave svg {
@@ -545,6 +565,7 @@ h4 { font-size: var(--fs-lg); }
   max-width: 680px;
   position: relative;
   z-index: 2;
+  padding: var(--space-lg) 0 var(--space-3xl);
 }
 
 .hero h1 {
@@ -555,9 +576,10 @@ h4 { font-size: var(--fs-lg); }
 
 .hero p {
   font-size: var(--fs-lg);
-  opacity: 0.9;
+  opacity: 0.96;
   margin-bottom: var(--space-xl);
   line-height: var(--lh-normal);
+  max-width: 34rem;
 }
 
 .hero__buttons {
@@ -568,7 +590,9 @@ h4 { font-size: var(--fs-lg); }
 
 /* Orchestra hero variant */
 .hero--orchestra {
-  background: linear-gradient(135deg, #1a2a30 0%, var(--color-primary-dark) 100%);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0) 34%),
+    linear-gradient(160deg, #176781 0%, #2f8fa6 45%, #6bb486 100%);
   text-align: center;
 }
 
@@ -577,22 +601,66 @@ h4 { font-size: var(--fs-lg); }
   margin: 0 auto;
 }
 
-/* Orchestra uses subtler gold, more white rings */
 .hero--orchestra::before {
-  background: rgba(255, 255, 255, 0.04);
-  width: 500px;
-  height: 500px;
-  top: -120px;
-  right: -100px;
+  background: radial-gradient(circle, rgba(249, 227, 161, 0.5) 0%, rgba(249, 227, 161, 0.12) 40%, rgba(249, 227, 161, 0) 72%);
 }
 
 .hero--orchestra::after {
-  border-color: rgba(255, 255, 255, 0.06);
-  bottom: -40px;
-  left: -60px;
-  right: auto;
-  width: 320px;
-  height: 320px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.11), rgba(255, 255, 255, 0.01));
+  opacity: 0.38;
+}
+
+.hero--orchestra .hero__band--hills {
+  background: linear-gradient(180deg, #5a9962 0%, #3c6f4a 100%);
+}
+
+.hero--orchestra .hero__band--valley {
+  background: linear-gradient(180deg, #dac46e 0%, #bba04e 100%);
+}
+
+.hero--orchestra .hero__band--river {
+  background: linear-gradient(180deg, #459fd1 0%, #1d73a4 100%);
+}
+
+.hero--compact {
+  padding: var(--space-2xl) 0 calc(var(--space-2xl) + 20px);
+}
+
+.hero--compact::before {
+  top: 26px;
+  right: 8%;
+  width: 190px;
+  height: 190px;
+}
+
+.hero--compact::after {
+  top: 24%;
+  height: 18%;
+}
+
+.hero--compact .hero__content {
+  padding: var(--space-sm) 0 var(--space-xl);
+}
+
+.hero--compact .hero__band--hills {
+  bottom: 14%;
+  height: 22%;
+}
+
+.hero--compact .hero__band--valley {
+  bottom: 5%;
+  height: 14%;
+  width: 130%;
+}
+
+.hero--compact .hero__band--river {
+  bottom: -5%;
+  height: 14%;
+  width: 136%;
+}
+
+.hero--compact .hero__wave {
+  height: 18px;
 }
 
 /* --- Stats Bar --- */
@@ -1026,9 +1094,11 @@ h4 { font-size: var(--fs-lg); }
 
 /* --- Page Header --- */
 .page-header {
-  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0) 34%),
+    linear-gradient(160deg, #1da8df 0%, #63d9f6 52%, #c7efcf 100%);
   color: var(--color-white);
-  padding: var(--space-2xl) 0 calc(var(--space-2xl) + 30px);
+  padding: var(--space-2xl) 0 calc(var(--space-2xl) + 20px);
   text-align: center;
   position: relative;
   overflow: hidden;
@@ -1038,24 +1108,71 @@ h4 { font-size: var(--fs-lg); }
 .page-header::before {
   content: '';
   position: absolute;
-  top: -60px;
-  right: -40px;
-  width: 280px;
-  height: 280px;
+  top: 26px;
+  right: 8%;
+  width: 190px;
+  height: 190px;
   border-radius: var(--radius-full);
-  background: rgba(212, 152, 42, 0.1);
+  background: radial-gradient(circle, rgba(255, 245, 189, 0.82) 0%, rgba(255, 245, 189, 0.22) 40%, rgba(255, 245, 189, 0) 72%);
+  z-index: 0;
 }
 
 /* Ring — left */
 .page-header::after {
   content: '';
   position: absolute;
-  bottom: 10px;
-  left: -30px;
-  width: 160px;
-  height: 160px;
-  border-radius: var(--radius-full);
-  border: 2px solid rgba(255, 255, 255, 0.08);
+  left: -10%;
+  right: -10%;
+  top: 24%;
+  height: 18%;
+  border-radius: 50%;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.14), rgba(255, 255, 255, 0.02));
+  opacity: 0.45;
+  transform: rotate(-4deg);
+  z-index: 0;
+}
+
+.page-header .container {
+  position: relative;
+  z-index: 2;
+}
+
+.page-header .hero__band--hills {
+  bottom: 14%;
+  height: 22%;
+}
+
+.page-header .hero__band--valley {
+  bottom: 5%;
+  height: 14%;
+  width: 130%;
+}
+
+.page-header .hero__band--river {
+  bottom: -5%;
+  height: 14%;
+  width: 136%;
+}
+
+.page-header .hero__notes svg:nth-child(1) {
+  top: 18%;
+  right: 9%;
+  width: 82px;
+  height: 82px;
+}
+
+.page-header .hero__notes svg:nth-child(2) {
+  bottom: 22%;
+  right: 24%;
+  width: 44px;
+  height: 44px;
+}
+
+.page-header .hero__notes svg:nth-child(3) {
+  top: 56%;
+  right: 6%;
+  width: 24px;
+  height: 24px;
 }
 
 .page-header h1 {
@@ -1078,8 +1195,9 @@ h4 { font-size: var(--fs-lg); }
   bottom: -1px;
   left: 0;
   width: 100%;
-  height: 30px;
+  height: 18px;
   pointer-events: none;
+  z-index: 2;
 }
 
 .page-header__wave svg {
@@ -1593,7 +1711,7 @@ h4 { font-size: var(--fs-lg); }
   }
 
   .hero {
-    padding: var(--space-2xl) 0 calc(var(--space-2xl) + 30px);
+    padding: var(--space-2xl) 0 calc(var(--space-2xl) + 24px);
   }
 
   .hero__notes {
@@ -1601,38 +1719,77 @@ h4 { font-size: var(--fs-lg); }
   }
 
   .hero::before {
-    width: 260px;
-    height: 260px;
-    top: -90px;
-    right: -90px;
+    width: 180px;
+    height: 180px;
+    top: 28px;
+    right: -24px;
   }
 
   .hero::after {
-    opacity: 0.72;
+    top: 26%;
+    height: 18%;
+    opacity: 0.34;
   }
 
   .hero__decor::before,
   .hero__decor::after {
-    opacity: 0.45;
+    opacity: 0.3;
   }
 
   .hero__band--hills {
-    bottom: 23%;
-    height: 24%;
+    bottom: 18%;
+    height: 22%;
   }
 
   .hero__band--valley {
-    bottom: 9%;
-    height: 19%;
+    bottom: 8%;
+    height: 15%;
   }
 
   .hero__band--river {
-    bottom: -2%;
-    height: 14%;
+    bottom: -4%;
+    height: 15%;
+  }
+
+  .hero__content {
+    padding: var(--space-md) 0 var(--space-2xl);
   }
 
   .page-header {
     padding: var(--space-xl) 0 calc(var(--space-xl) + 20px);
+  }
+
+  .page-header::before,
+  .hero--compact::before {
+    width: 150px;
+    height: 150px;
+    top: 20px;
+    right: -10px;
+  }
+
+  .page-header::after,
+  .hero--compact::after {
+    top: 26%;
+    height: 14%;
+    opacity: 0.3;
+  }
+
+  .page-header .hero__band--hills,
+  .hero--compact .hero__band--hills {
+    bottom: 14%;
+    height: 18%;
+  }
+
+  .page-header .hero__band--valley,
+  .hero--compact .hero__band--valley {
+    bottom: 6%;
+    height: 12%;
+  }
+
+  .page-header .hero__band--river,
+  .hero--compact .hero__band--river {
+    bottom: -4%;
+    height: 12%;
   }
 
   .hero h1 {
@@ -1693,6 +1850,52 @@ h4 { font-size: var(--fs-lg); }
 
   .section {
     padding: var(--space-2xl) 0;
+  }
+
+  .page-header .hero__band--hills,
+  .hero--compact .hero__band--hills {
+    width: 136%;
+  }
+
+  .page-header .hero__band--valley,
+  .hero--compact .hero__band--valley {
+    bottom: 5%;
+    height: 13%;
+    width: 144%;
+  }
+
+  .page-header .hero__band--river,
+  .hero--compact .hero__band--river {
+    bottom: -3%;
+    height: 11%;
+    width: 150%;
+  }
+
+  .page-header__wave,
+  .hero--compact .hero__wave {
+    height: 14px;
+  }
+
+  .hero__band--hills {
+    bottom: 16%;
+    height: 20%;
+    width: 136%;
+  }
+
+  .hero__band--valley {
+    bottom: 5%;
+    height: 17%;
+    width: 144%;
+  }
+
+  .hero__band--river {
+    bottom: -3%;
+    height: 14%;
+    width: 150%;
+  }
+
+  .hero__wave {
+    height: 16px;
   }
 
   .hero__buttons {

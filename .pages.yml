@@ -1,0 +1,99 @@
+media:
+  - name: images
+    label: Images
+    input: images
+    output: /images
+    extensions: [svg, png, jpg, jpeg, webp, gif]
+
+content:
+  - name: home_page
+    label: Home Page
+    type: file
+    path: index.html
+    format: raw
+    fields:
+      - name: body
+        label: Home HTML
+        type: code
+        description: Edit the full home page HTML. Content is currently embedded directly in this file.
+        options:
+          language: html
+
+  - name: classes_page
+    label: Classes Page
+    type: file
+    path: classes.html
+    format: raw
+    fields:
+      - name: body
+        label: Classes HTML
+        type: code
+        description: Edit the full classes page HTML.
+        options:
+          language: html
+
+  - name: orchestra_page
+    label: Orchestra Page
+    type: file
+    path: orchestra.html
+    format: raw
+    fields:
+      - name: body
+        label: Orchestra HTML
+        type: code
+        description: Edit the full orchestra page HTML.
+        options:
+          language: html
+
+  - name: about_page
+    label: About Page
+    type: file
+    path: about.html
+    format: raw
+    fields:
+      - name: body
+        label: About HTML
+        type: code
+        description: Edit the full about page HTML.
+        options:
+          language: html
+
+  - name: enrol_page
+    label: Enrol Page
+    type: file
+    path: enrol.html
+    format: raw
+    fields:
+      - name: body
+        label: Enrol HTML
+        type: code
+        description: Edit the full enrolment page HTML.
+        options:
+          language: html
+
+  - name: site_styles
+    label: Site Styles
+    type: file
+    path: css/style.css
+    format: raw
+    fields:
+      - name: body
+        label: CSS
+        type: code
+        description: Shared stylesheet used across the entire site.
+
+  - name: site_scripts
+    label: Site Scripts
+    type: file
+    path: js/main.js
+    format: raw
+    fields:
+      - name: body
+        label: JavaScript
+        type: code
+        description: Shared front-end JavaScript for navigation and form behavior.
+        options:
+          language: javascript
+
+settings:
+  hide: true
