@@ -601,6 +601,10 @@ h4 { font-size: var(--fs-lg); }
   margin: 0 auto;
 }
 
+.hero--orchestra .hero__notes {
+  display: none;
+}
+
 .hero--orchestra::before {
   background: radial-gradient(circle, rgba(249, 227, 161, 0.5) 0%, rgba(249, 227, 161, 0.12) 40%, rgba(249, 227, 161, 0) 72%);
 }
@@ -640,6 +644,29 @@ h4 { font-size: var(--fs-lg); }
 
 .hero--compact .hero__content {
   padding: var(--space-sm) 0 var(--space-xl);
+}
+
+.hero--orchestra.hero--compact .container {
+  position: relative;
+  z-index: 2;
+}
+
+.hero--orchestra.hero--compact .hero__content {
+  max-width: 720px;
+  padding: var(--space-md) 0 var(--space-xl);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero--orchestra.hero--compact p {
+  max-width: 32rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero--orchestra.hero--compact .hero__buttons {
+  justify-content: center;
 }
 
 .hero--compact .hero__band--hills {
