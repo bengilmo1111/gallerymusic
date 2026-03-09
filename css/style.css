@@ -358,20 +358,122 @@ h4 { font-size: var(--fs-lg); }
 .hero {
   background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
   color: var(--color-white);
-  padding: var(--space-4xl) 0;
+  padding: var(--space-4xl) 0 calc(var(--space-4xl) + 40px);
   position: relative;
   overflow: hidden;
 }
 
+/* Large bold circle — top right */
 .hero::before {
   content: '';
   position: absolute;
-  top: -50%;
-  right: -20%;
-  width: 600px;
-  height: 600px;
+  top: -80px;
+  right: -60px;
+  width: 420px;
+  height: 420px;
   border-radius: var(--radius-full);
-  background: rgba(212, 152, 42, 0.08);
+  background: rgba(212, 152, 42, 0.12);
+}
+
+/* Second circle — bottom right, overlapping */
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: 20px;
+  right: 120px;
+  width: 260px;
+  height: 260px;
+  border-radius: var(--radius-full);
+  border: 3px solid rgba(212, 152, 42, 0.15);
+}
+
+/* Decorative shapes container */
+.hero__decor {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+/* Small solid gold circle — mid left */
+.hero__decor::before {
+  content: '';
+  position: absolute;
+  top: 30%;
+  right: 18%;
+  width: 80px;
+  height: 80px;
+  border-radius: var(--radius-full);
+  background: rgba(212, 152, 42, 0.1);
+}
+
+/* Thin ring accent — lower left */
+.hero__decor::after {
+  content: '';
+  position: absolute;
+  bottom: 60px;
+  left: -40px;
+  width: 180px;
+  height: 180px;
+  border-radius: var(--radius-full);
+  border: 2px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Musical note SVG silhouettes */
+.hero__notes {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.hero__notes svg {
+  position: absolute;
+  opacity: 0.07;
+  fill: currentColor;
+  color: var(--color-white);
+}
+
+.hero__notes svg:nth-child(1) {
+  top: 15%;
+  right: 8%;
+  width: 120px;
+  height: 120px;
+  transform: rotate(-15deg);
+  opacity: 0.09;
+}
+
+.hero__notes svg:nth-child(2) {
+  bottom: 25%;
+  right: 25%;
+  width: 60px;
+  height: 60px;
+  transform: rotate(20deg);
+  opacity: 0.06;
+}
+
+.hero__notes svg:nth-child(3) {
+  top: 50%;
+  right: 4%;
+  width: 40px;
+  height: 40px;
+  transform: rotate(-30deg);
+  opacity: 0.05;
+}
+
+/* Wavy bottom edge */
+.hero__wave {
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 40px;
+  pointer-events: none;
+}
+
+.hero__wave svg {
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 
 .hero__content {
@@ -408,6 +510,24 @@ h4 { font-size: var(--fs-lg); }
 .hero--orchestra .hero__content {
   max-width: 700px;
   margin: 0 auto;
+}
+
+/* Orchestra uses subtler gold, more white rings */
+.hero--orchestra::before {
+  background: rgba(255, 255, 255, 0.04);
+  width: 500px;
+  height: 500px;
+  top: -120px;
+  right: -100px;
+}
+
+.hero--orchestra::after {
+  border-color: rgba(255, 255, 255, 0.06);
+  bottom: -40px;
+  left: -60px;
+  right: auto;
+  width: 320px;
+  height: 320px;
 }
 
 /* --- Stats Bar --- */
@@ -841,15 +961,66 @@ h4 { font-size: var(--fs-lg); }
 
 /* --- Page Header --- */
 .page-header {
-  background: var(--color-primary-light);
-  padding: var(--space-2xl) 0;
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+  color: var(--color-white);
+  padding: var(--space-2xl) 0 calc(var(--space-2xl) + 30px);
   text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Decorative circle — right */
+.page-header::before {
+  content: '';
+  position: absolute;
+  top: -60px;
+  right: -40px;
+  width: 280px;
+  height: 280px;
+  border-radius: var(--radius-full);
+  background: rgba(212, 152, 42, 0.1);
+}
+
+/* Ring — left */
+.page-header::after {
+  content: '';
+  position: absolute;
+  bottom: 10px;
+  left: -30px;
+  width: 160px;
+  height: 160px;
+  border-radius: var(--radius-full);
+  border: 2px solid rgba(255, 255, 255, 0.08);
+}
+
+.page-header h1 {
+  color: var(--color-white);
+  position: relative;
+  z-index: 1;
 }
 
 .page-header p {
-  color: var(--color-text-light);
+  color: rgba(255, 255, 255, 0.85);
   max-width: 600px;
   margin: var(--space-sm) auto 0;
+  position: relative;
+  z-index: 1;
+}
+
+/* Wavy bottom edge for page headers */
+.page-header__wave {
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 30px;
+  pointer-events: none;
+}
+
+.page-header__wave svg {
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 
 /* --- FAQ Accordion --- */
