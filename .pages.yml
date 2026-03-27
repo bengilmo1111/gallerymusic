@@ -17,7 +17,11 @@ content:
     fields:
       - name: terms
         label: Terms
-        type: list
+        type: object
+        list:
+          collapsible: true
+          collapsed: false
+          summary: "{name} \u2014 {dates}"
         fields:
           - name: name
             label: Term
@@ -30,11 +34,11 @@ content:
           - name: dates
             label: Dates
             type: string
-            description: "e.g. 8 Feb – 5 Apr  (or include a note like 'includes Annual Concert')"
+            description: "e.g. 8 Feb \u2013 5 Apr"
       - name: note
         label: Note below the table
         type: string
-        description: "Small reminder shown under the term dates table, e.g. 'No classes on public holiday weekends'"
+        description: "Small reminder shown under the term dates table"
 
   - name: faqs
     label: "FAQs"
@@ -44,7 +48,11 @@ content:
     fields:
       - name: faqs
         label: Questions & Answers
-        type: list
+        type: object
+        list:
+          collapsible: true
+          collapsed: true
+          summary: "{question}"
         fields:
           - name: question
             label: Question
@@ -52,7 +60,7 @@ content:
           - name: answer
             label: Answer
             type: text
-            description: "Plain text answer. Update prices, waitlist notes, and other details here."
+            description: "Update prices, waitlist notes, and other details here."
 
   # ── Occasionally updated ─────────────────────────────────────────────────────
 
@@ -64,7 +72,11 @@ content:
     fields:
       - name: teachers
         label: Teachers
-        type: list
+        type: object
+        list:
+          collapsible: true
+          collapsed: true
+          summary: "{name} \u2014 {role}"
         fields:
           - name: name
             label: Full name
@@ -76,7 +88,7 @@ content:
           - name: bio
             label: Bio
             type: text
-            description: "1–2 sentences. Leave blank to hide."
+            description: "1\u20132 sentences. Leave blank to hide."
 
   - name: committee
     label: "Committee"
@@ -86,7 +98,11 @@ content:
     fields:
       - name: committee
         label: Committee members
-        type: list
+        type: object
+        list:
+          collapsible: true
+          collapsed: false
+          summary: "{name} \u2014 {role}"
         fields:
           - name: name
             label: Name
@@ -109,7 +125,11 @@ content:
     fields:
       - name: instruments
         label: Instruments
-        type: list
+        type: object
+        list:
+          collapsible: true
+          collapsed: true
+          summary: "{name}"
         fields:
           - name: name
             label: Name
@@ -117,11 +137,11 @@ content:
           - name: emoji
             label: Icon (emoji)
             type: string
-            description: "Single emoji, e.g. 🎻"
+            description: "Single emoji, e.g. \ud83c\udfbb"
           - name: summary
             label: Short description (Home page)
             type: string
-            description: "One sentence shown on the home page grid, e.g. 'Ages 7+. Waitlists may apply.'"
+            description: "One sentence shown on the home page grid"
           - name: description
             label: Full description (Classes page)
             type: text
@@ -133,7 +153,7 @@ content:
           - name: free
             label: Free class?
             type: boolean
-            description: "Turn on for classes with no extra cost (e.g. Choir). Shows a highlighted card."
+            description: "Turn on for classes with no extra cost (e.g. Choir)"
           - name: show_on_home
             label: Show on Home page?
             type: boolean
@@ -149,12 +169,16 @@ content:
     fields:
       - name: testimonials
         label: Testimonials
-        type: list
+        type: object
+        list:
+          collapsible: true
+          collapsed: true
+          summary: "{author}"
         fields:
           - name: quote
             label: Quote
             type: text
-            description: "The parent's words — no quotation marks needed."
+            description: "The parent's words \u2014 no quotation marks needed."
           - name: author
             label: Attribution
             type: string
