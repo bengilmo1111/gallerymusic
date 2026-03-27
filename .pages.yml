@@ -7,10 +7,12 @@ media:
 
 content:
 
-  # ── Most frequently updated ──────────────────────────────────────────────────
+  # ═══════════════════════════════════════════════
+  #  🏠  HOME PAGE
+  # ═══════════════════════════════════════════════
 
-  - name: term_dates
-    label: "Term Dates"
+  - name: home_term_dates
+    label: "🏠 Home — Term Dates"
     type: file
     path: _data/term-dates.json
     format: json
@@ -21,7 +23,7 @@ content:
         list:
           collapsible: true
           collapsed: false
-          summary: "{name} \u2014 {dates}"
+          summary: "{name} — {dates}"
         fields:
           - name: name
             label: Term
@@ -34,14 +36,99 @@ content:
           - name: dates
             label: Dates
             type: string
-            description: "e.g. 8 Feb \u2013 5 Apr"
+            description: "e.g. 8 Feb – 5 Apr"
       - name: note
         label: Note below the table
         type: string
         description: "Small reminder shown under the term dates table"
 
-  - name: faqs
-    label: "FAQs"
+  - name: home_site_settings
+    label: "🏠 Home — Stats & Site Settings"
+    type: file
+    path: _data/site-settings.json
+    format: json
+    fields:
+      - name: stats
+        label: Key Stats (the 4 numbers displayed on the home page)
+        type: object
+        list:
+          collapsible: true
+          collapsed: false
+          summary: "{value} {label}"
+        fields:
+          - name: value
+            label: Value
+            type: string
+            description: "e.g. 10+  or  $210  or  25 min"
+          - name: label
+            label: Label
+            type: string
+            description: "e.g. Instruments  or  Per Year"
+      - name: price_per_year
+        label: Annual fee (used in text)
+        type: string
+        description: "e.g. $210 — update here if fees change"
+      - name: lesson_duration_minutes
+        label: Lesson duration (minutes)
+        type: number
+        description: "e.g. 25"
+      - name: class_size
+        label: Typical class size
+        type: string
+        description: "e.g. 4–6 students"
+      - name: clubhub_url
+        label: ClubHub URL
+        type: string
+        description: "Full URL for the ClubHub login link. Leave blank to hide the button."
+
+  # ═══════════════════════════════════════════════
+  #  📖  CLASSES PAGE
+  # ═══════════════════════════════════════════════
+
+  - name: classes_instruments
+    label: "📖 Classes — Instrument Classes"
+    type: file
+    path: _data/instruments.json
+    format: json
+    fields:
+      - name: instruments
+        label: Instruments
+        type: object
+        list:
+          collapsible: true
+          collapsed: true
+          summary: "{name}"
+        fields:
+          - name: name
+            label: Name
+            type: string
+          - name: emoji
+            label: Icon (emoji)
+            type: string
+            description: "Single emoji, e.g. 🎻"
+          - name: summary
+            label: Short description (Home page)
+            type: string
+            description: "One sentence shown on the home page grid"
+          - name: description
+            label: Full description (Classes page)
+            type: text
+            description: "Full paragraph shown on the Classes page. Include hire costs, waitlist notes, etc."
+          - name: tag
+            label: Age / tag badge
+            type: string
+            description: "e.g. Ages 7+   or   Free!   or   2+ years experience"
+          - name: free
+            label: Free class?
+            type: boolean
+            description: "Turn on for classes with no extra cost (e.g. Choir, Orchestra)"
+          - name: show_on_home
+            label: Show on Home page?
+            type: boolean
+            description: "Should this instrument appear in the grid on the home page?"
+
+  - name: classes_faqs
+    label: "📖 Classes — FAQs"
     type: file
     path: _data/faqs.json
     format: json
@@ -62,10 +149,45 @@ content:
             type: text
             description: "Update prices, waitlist notes, and other details here."
 
-  # ── Occasionally updated ─────────────────────────────────────────────────────
+  # ═══════════════════════════════════════════════
+  #  🎻  ORCHESTRA PAGE
+  # ═══════════════════════════════════════════════
 
-  - name: teachers
-    label: "Teachers"
+  - name: orchestra_details
+    label: "🎻 Orchestra — Practical Details"
+    type: file
+    path: _data/orchestra-details.json
+    format: json
+    fields:
+      - name: when
+        label: When
+        type: string
+        description: "e.g. Saturday mornings — contact us for current schedule"
+      - name: where
+        label: Where
+        type: string
+        description: "Address"
+      - name: cost
+        label: Cost
+        type: string
+        description: "e.g. Free"
+      - name: bring
+        label: What to bring
+        type: string
+      - name: experience
+        label: Experience required
+        type: string
+      - name: contact_note
+        label: Contact / audition note
+        type: string
+        description: "Shown at the bottom of the 'Who Is It For?' section"
+
+  # ═══════════════════════════════════════════════
+  #  👥  ABOUT PAGE
+  # ═══════════════════════════════════════════════
+
+  - name: about_teachers
+    label: "👥 About — Teachers"
     type: file
     path: _data/teachers.json
     format: json
@@ -76,7 +198,7 @@ content:
         list:
           collapsible: true
           collapsed: true
-          summary: "{name} \u2014 {role}"
+          summary: "{name} — {role}"
         fields:
           - name: name
             label: Full name
@@ -88,10 +210,10 @@ content:
           - name: bio
             label: Bio
             type: text
-            description: "1\u20132 sentences. Leave blank to hide."
+            description: "1–2 sentences. Leave blank to hide."
 
-  - name: committee
-    label: "Committee"
+  - name: about_committee
+    label: "👥 About — Committee"
     type: file
     path: _data/committee.json
     format: json
@@ -102,7 +224,7 @@ content:
         list:
           collapsible: true
           collapsed: false
-          summary: "{name} \u2014 {role}"
+          summary: "{name} — {role}"
         fields:
           - name: name
             label: Name
@@ -117,52 +239,12 @@ content:
             type: text
             description: "Short bio. Leave blank to hide."
 
-  - name: instruments
-    label: "Instrument Classes"
-    type: file
-    path: _data/instruments.json
-    format: json
-    fields:
-      - name: instruments
-        label: Instruments
-        type: object
-        list:
-          collapsible: true
-          collapsed: true
-          summary: "{name}"
-        fields:
-          - name: name
-            label: Name
-            type: string
-          - name: emoji
-            label: Icon (emoji)
-            type: string
-            description: "Single emoji, e.g. \ud83c\udfbb"
-          - name: summary
-            label: Short description (Home page)
-            type: string
-            description: "One sentence shown on the home page grid"
-          - name: description
-            label: Full description (Classes page)
-            type: text
-            description: "Full paragraph shown on the Classes page. Include hire costs, waitlist notes, etc."
-          - name: tag
-            label: Age / tag badge
-            type: string
-            description: "e.g. Ages 7+   or   Free!   or   2+ years experience"
-          - name: free
-            label: Free class?
-            type: boolean
-            description: "Turn on for classes with no extra cost (e.g. Choir)"
-          - name: show_on_home
-            label: Show on Home page?
-            type: boolean
-            description: "Should this instrument appear in the grid on the home page?"
-
-  # ── When you have testimonials ready ─────────────────────────────────────────
+  # ═══════════════════════════════════════════════
+  #  💬  FUTURE CONTENT (add when ready)
+  # ═══════════════════════════════════════════════
 
   - name: testimonials
-    label: "Testimonials (What Parents Say)"
+    label: "💬 Testimonials (add when you have real quotes)"
     type: file
     path: _data/testimonials.json
     format: json
@@ -178,7 +260,7 @@ content:
           - name: quote
             label: Quote
             type: text
-            description: "The parent's words \u2014 no quotation marks needed."
+            description: "The parent's words — no quotation marks needed."
           - name: author
             label: Attribution
             type: string

@@ -1,0 +1,12 @@
+{
+  "stats": [
+    { "value": "10+", "label": "Instruments" },
+    { "value": "$210", "label": "Per Year" },
+    { "value": "4–6", "label": "Students Per Class" },
+    { "value": "25 min", "label": "Weekly Lessons" }
+  ],
+  "price_per_year": "$210",
+  "lesson_duration_minutes": 25,
+  "class_size": "4–6 students",
+  "clubhub_url": ""
+}

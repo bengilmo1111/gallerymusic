@@ -83,6 +83,35 @@
     }).join('');
   }
 
+  /* --- Stat Cards (home page) --- */
+  function renderStats(data) {
+    var container = document.getElementById('key-stats');
+    if (!container || !data.stats) return;
+    container.innerHTML = data.stats.map(function (s) {
+      return '<div class="stat-card"><span class="stat-card__value">' + escapeHTML(s.value) + '</span><span class="stat-card__label">' + escapeHTML(s.label) + '</span></div>';
+    }).join('');
+    if (data.clubhub_url) {
+      var clubhubBtn = document.querySelector('.clubhub-banner .btn');
+      if (clubhubBtn) clubhubBtn.href = data.clubhub_url;
+    }
+  }
+
+  /* --- Orchestra Details --- */
+  function renderOrchestraDetails(data) {
+    var list = document.getElementById('orchestra-details-list');
+    if (!list) return;
+    var fields = ['when', 'where', 'cost', 'bring', 'experience'];
+    var labels = { when: 'When', where: 'Where', cost: 'Cost', bring: 'Bring', experience: 'Experience' };
+    list.innerHTML = fields.map(function (f) {
+      if (!data[f]) return '';
+      return '<li><strong>' + labels[f] + '</strong><span>' + escapeHTML(data[f]) + '</span></li>';
+    }).join('');
+    var contactNote = document.getElementById('orchestra-contact-note');
+    if (contactNote && data.contact_note) {
+      contactNote.textContent = data.contact_note;
+    }
+  }
+
   /* --- FAQs --- */
   function renderFAQs(data) {
     var container = document.getElementById('faq-list');
@@ -95,20 +124,24 @@
   /* --- Init: only load what the current page needs --- */
   document.addEventListener('DOMContentLoaded', function () {
     var needs = {
-      termDates:        !!(document.getElementById('term-dates-body') || document.getElementById('term-dates-note')),
-      testimonials:     !!document.getElementById('testimonials-container'),
-      teachers:         !!document.getElementById('teachers-grid'),
-      committee:        !!document.getElementById('committee-grid'),
-      homeInstruments:  !!document.getElementById('home-instruments'),
-      classInstruments: !!document.getElementById('class-instruments'),
-      faqs:             !!document.getElementById('faq-list')
+      termDates:          !!(document.getElementById('term-dates-body') || document.getElementById('term-dates-note')),
+      testimonials:       !!document.getElementById('testimonials-container'),
+      teachers:           !!document.getElementById('teachers-grid'),
+      committee:          !!document.getElementById('committee-grid'),
+      homeInstruments:    !!document.getElementById('home-instruments'),
+      classInstruments:   !!document.getElementById('class-instruments'),
+      faqs:               !!document.getElementById('faq-list'),
+      stats:              !!document.getElementById('key-stats'),
+      orchestraDetails:   !!document.getElementById('orchestra-details-list')
     };
 
-    if (needs.termDates)    fetchJSON('term-dates.json').then(renderTermDates).catch(console.error);
-    if (needs.testimonials) fetchJSON('testimonials.json').then(renderTestimonials).catch(console.error);
-    if (needs.teachers)     fetchJSON('teachers.json').then(renderTeachers).catch(console.error);
-    if (needs.committee)    fetchJSON('committee.json').then(renderCommittee).catch(console.error);
-    if (needs.faqs)         fetchJSON('faqs.json').then(renderFAQs).catch(console.error);
+    if (needs.termDates)        fetchJSON('term-dates.json').then(renderTermDates).catch(console.error);
+    if (needs.testimonials)     fetchJSON('testimonials.json').then(renderTestimonials).catch(console.error);
+    if (needs.teachers)         fetchJSON('teachers.json').then(renderTeachers).catch(console.error);
+    if (needs.committee)        fetchJSON('committee.json').then(renderCommittee).catch(console.error);
+    if (needs.faqs)             fetchJSON('faqs.json').then(renderFAQs).catch(console.error);
+    if (needs.stats)            fetchJSON('site-settings.json').then(renderStats).catch(console.error);
+    if (needs.orchestraDetails) fetchJSON('orchestra-details.json').then(renderOrchestraDetails).catch(console.error);
     if (needs.homeInstruments || needs.classInstruments) {
       fetchJSON('instruments.json').then(function (data) {
         if (needs.homeInstruments)  renderHomeInstruments(data);

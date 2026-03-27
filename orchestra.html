@@ -18,7 +18,7 @@
   <!-- Header -->
   <header class="site-header">
     <nav class="nav container" aria-label="Main navigation">
-      <a href="index.html" class="nav__logo" aria-label="Gallery Music Centre — Home">
+      <a href="home.html" class="nav__logo" aria-label="Gallery Music Centre — Home">
         <svg viewBox="0 0 32 32" fill="none" aria-hidden="true">
           <circle cx="16" cy="16" r="15" stroke="currentColor" stroke-width="2"/>
           <path d="M12 22V12l10-2v10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -29,7 +29,7 @@
       </a>
       <div class="nav__overlay" aria-hidden="true"></div>
       <ul class="nav__links" id="nav-links">
-        <li><a href="index.html">Home</a></li>
+        <li><a href="home.html">Home</a></li>
         <li><a href="classes.html">Classes</a></li>
         <li><a href="orchestra.html" class="active">Orchestra</a></li>
         <li><a href="about.html">About</a></li>
@@ -68,6 +68,7 @@
     <!-- About the Orchestra -->
     <section class="section">
       <div class="container" style="max-width: 800px;">
+        <div class="placeholder-notice" aria-label="Placeholder content"></div>
         <h2>About the Orchestra</h2>
         <p style="margin-top: var(--space-md); margin-bottom: var(--space-md);">
           The Gallery Community Orchestra is open to musicians of all ages &mdash; unlike our other classes, which are primarily for primary and intermediate school students. Whether you're a teenager, a university student, or an adult returning to music, you're welcome here.
@@ -75,7 +76,6 @@
         <p style="margin-bottom: var(--space-md);">
           Players should have approximately 3 years of prior tuition on their instrument. The orchestra meets on Saturday mornings alongside the children's classes at Dyer Street School, making it easy for parents to play while their children are in lessons.
         </p>
-        <!-- TODO: Replace with details about the orchestra conductor, current repertoire, and upcoming performances -->
         <p>
           Rehearsals cover a range of repertoire from classical to contemporary, chosen to be engaging and achievable for players of varying abilities. The orchestra performs at the annual Gallery concert and occasionally at community events throughout the year.
         </p>
@@ -106,9 +106,8 @@
             <p>Anyone looking for a friendly, low-pressure group to make music with on Saturday mornings. All ages and backgrounds welcome.</p>
           </div>
         </div>
-        <!-- TODO: Confirm whether audition is required — use placeholder text noting this should be verified -->
-        <p style="text-align: center; margin-top: var(--space-xl); color: var(--color-text-light); font-size: var(--fs-sm);">
-          No audition required &mdash; just a willingness to learn and play together. <em>(Please confirm with admin.)</em>
+        <p id="orchestra-contact-note" style="text-align: center; margin-top: var(--space-xl); color: var(--color-text-light); font-size: var(--fs-sm);">
+          <!-- loaded from _data/orchestra-details.json -->
         </p>
       </div>
     </section>
@@ -119,29 +118,8 @@
         <div class="section-title">
           <h2>Practical Details</h2>
         </div>
-        <ul class="details-list">
-          <li>
-            <strong>When</strong>
-            <!-- TODO: Confirm exact time slot -->
-            <span>Saturday mornings (time TBC &mdash; alongside children's classes)</span>
-          </li>
-          <li>
-            <strong>Where</strong>
-            <span>Dyer Street School, 9 Dyer Street, Epuni, Lower Hutt 5011</span>
-          </li>
-          <li>
-            <strong>Cost</strong>
-            <!-- TODO: Confirm if cost is the same as other classes -->
-            <span>$210/year (same as other Gallery classes)</span>
-          </li>
-          <li>
-            <strong>Bring</strong>
-            <span>Your instrument and a music stand if you have one</span>
-          </li>
-          <li>
-            <strong>Experience</strong>
-            <span>Approximately 3 years of prior tuition on your instrument</span>
-          </li>
+        <ul class="details-list" id="orchestra-details-list">
+          <!-- loaded from _data/orchestra-details.json -->
         </ul>
       </div>
     </section>
@@ -179,7 +157,7 @@
         <div>
           <h4>Quick Links</h4>
           <ul class="footer__links">
-            <li><a href="index.html">Home</a></li>
+            <li><a href="home.html">Home</a></li>
             <li><a href="classes.html">Classes</a></li>
             <li><a href="orchestra.html">Orchestra</a></li>
             <li><a href="about.html">About</a></li>
@@ -207,6 +185,7 @@
     </div>
   </footer>
 
+  <script src="js/content.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>
