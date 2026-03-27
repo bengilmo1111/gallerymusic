@@ -1,0 +1,24 @@
+{
+  "committee": [
+    {
+      "name": "Committee Member",
+      "role": "Chairperson",
+      "bio": ""
+    },
+    {
+      "name": "Committee Member",
+      "role": "Secretary",
+      "bio": ""
+    },
+    {
+      "name": "Committee Member",
+      "role": "Treasurer",
+      "bio": ""
+    },
+    {
+      "name": "Committee Member",
+      "role": "Gallery Coordinator",
+      "bio": ""
+    }
+  ]
+}

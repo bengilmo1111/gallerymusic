@@ -1,0 +1,34 @@
+{
+  "teachers": [
+    {
+      "name": "Alex Hoare",
+      "role": "Cello",
+      "bio": "BMus(Hons) from the NZ School of Music. Alex brings years of orchestral and teaching experience to Gallery\u2019s cello programme."
+    },
+    {
+      "name": "Jane Smith",
+      "role": "Violin",
+      "bio": "An experienced violin teacher with a passion for group instruction and helping young students build a strong foundation in string playing."
+    },
+    {
+      "name": "Michael Kahu",
+      "role": "Guitar & Keyboard",
+      "bio": "A versatile musician who has been teaching guitar and keyboard to young learners for over a decade."
+    },
+    {
+      "name": "Rachel Lee",
+      "role": "Flute & Recorder",
+      "bio": "Classically trained flautist with a warm, encouraging teaching style. Rachel loves introducing students to the world of woodwind."
+    },
+    {
+      "name": "David Torres",
+      "role": "Drums & Trumpet",
+      "bio": "A dynamic percussionist and brass player who keeps Saturday mornings full of energy and rhythm."
+    },
+    {
+      "name": "Sarah Ngata",
+      "role": "Music Basics & Choir",
+      "bio": "A passionate music educator who specialises in early childhood music, helping our youngest students find their musical voice."
+    }
+  ]
+}

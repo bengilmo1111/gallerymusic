@@ -88,49 +88,8 @@
           <h2>Our Teachers</h2>
           <p>Dedicated professionals who bring music to life every Saturday.</p>
         </div>
-        <!-- TODO: Replace placeholder teacher bios with real information -->
-        <div class="people-grid">
-          <div class="person-card">
-            <div class="person-card__avatar">AH</div>
-            <h3>Alex Hoare</h3>
-            <div class="person-card__role">Cello</div>
-            <p>BMus(Hons) from the NZ School of Music. Alex brings years of orchestral and teaching experience to Gallery's cello programme.</p>
-          </div>
-          <div class="person-card">
-            <!-- TODO: Replace with actual teacher details -->
-            <div class="person-card__avatar">JS</div>
-            <h3>Jane Smith</h3>
-            <div class="person-card__role">Violin</div>
-            <p>An experienced violin teacher with a passion for group instruction and helping young students build a strong foundation in string playing.</p>
-          </div>
-          <div class="person-card">
-            <!-- TODO: Replace with actual teacher details -->
-            <div class="person-card__avatar">MK</div>
-            <h3>Michael Kahu</h3>
-            <div class="person-card__role">Guitar &amp; Keyboard</div>
-            <p>A versatile musician who has been teaching guitar and keyboard to young learners for over a decade.</p>
-          </div>
-          <div class="person-card">
-            <!-- TODO: Replace with actual teacher details -->
-            <div class="person-card__avatar">RL</div>
-            <h3>Rachel Lee</h3>
-            <div class="person-card__role">Flute &amp; Recorder</div>
-            <p>Classically trained flautist with a warm, encouraging teaching style. Rachel loves introducing students to the world of woodwind.</p>
-          </div>
-          <div class="person-card">
-            <!-- TODO: Replace with actual teacher details -->
-            <div class="person-card__avatar">DT</div>
-            <h3>David Torres</h3>
-            <div class="person-card__role">Drums &amp; Trumpet</div>
-            <p>A dynamic percussionist and brass player who keeps Saturday mornings full of energy and rhythm.</p>
-          </div>
-          <div class="person-card">
-            <!-- TODO: Replace with actual teacher details -->
-            <div class="person-card__avatar">SN</div>
-            <h3>Sarah Ngata</h3>
-            <div class="person-card__role">Music Basics &amp; Choir</div>
-            <p>A passionate music educator who specialises in early childhood music, helping our youngest students find their musical voice.</p>
-          </div>
+        <div class="people-grid" id="teachers-grid">
+          <!-- loaded from _data/teachers.json -->
         </div>
       </div>
     </section>
@@ -145,28 +104,8 @@
         <p style="margin-bottom: var(--space-xl); text-align: center;">
           If you are willing to help ensure Gallery continues to offer musical education at minimum cost, please consider joining the committee. We welcome volunteers with all kinds of skills and backgrounds.
         </p>
-        <!-- TODO: Replace placeholder committee members with real names -->
-        <div class="people-grid people-grid--two">
-          <div class="person-card">
-            <div class="person-card__avatar">CP</div>
-            <h3>Committee Member</h3>
-            <div class="person-card__role">Chairperson</div>
-          </div>
-          <div class="person-card">
-            <div class="person-card__avatar">SC</div>
-            <h3>Committee Member</h3>
-            <div class="person-card__role">Secretary</div>
-          </div>
-          <div class="person-card">
-            <div class="person-card__avatar">TR</div>
-            <h3>Committee Member</h3>
-            <div class="person-card__role">Treasurer</div>
-          </div>
-          <div class="person-card">
-            <div class="person-card__avatar">GC</div>
-            <h3>Committee Member</h3>
-            <div class="person-card__role">Gallery Coordinator</div>
-          </div>
+        <div class="people-grid people-grid--two" id="committee-grid">
+          <!-- loaded from _data/committee.json -->
         </div>
         <p style="margin-top: var(--space-xl); text-align: center; color: var(--color-text-light); font-size: var(--fs-sm);">
           Our Annual General Meeting is held each year &mdash; details are announced via email and <a href="https://www.facebook.com/gallerymusiccentre" target="_blank" rel="noopener noreferrer">Facebook</a>.
@@ -262,6 +201,7 @@
     </div>
   </footer>
 
+  <script src="js/content.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>

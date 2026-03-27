@@ -1,0 +1,9 @@
+{
+  "terms": [
+    { "name": "Term 1", "lessons": "8 lessons", "dates": "8 Feb \u2013 5 Apr" },
+    { "name": "Term 2", "lessons": "8 lessons", "dates": "3 May \u2013 28 Jun" },
+    { "name": "Term 3", "lessons": "9 lessons", "dates": "26 Jul \u2013 20 Sep (includes Annual Concert)" },
+    { "name": "Term 4", "lessons": "8 lessons", "dates": "18 Oct \u2013 6 Dec" }
+  ],
+  "note": "No classes on public holiday weekends \u2014 see full calendar for details."
+}

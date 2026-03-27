@@ -1,0 +1,112 @@
+{
+  "instruments": [
+    {
+      "emoji": "\ud83c\udfbc",
+      "name": "Music Basics",
+      "description": "A pre-instrumental programme introducing children to music fundamentals through singing, movement, rhythm games, and basic notation. A fun and engaging first step into the world of music.",
+      "summary": "Ages 5\u20137. A fun introduction to music fundamentals.",
+      "tag": "Ages 5\u20137",
+      "free": false,
+      "show_on_home": true
+    },
+    {
+      "emoji": "\ud83c\udfbb",
+      "name": "Violin",
+      "description": "Learn violin in a supportive group setting. Students develop bowing technique, posture, and music reading skills while playing together with their peers.",
+      "summary": "Ages 7+. Learn violin in a supportive group setting.",
+      "tag": "Ages 7+",
+      "free": false,
+      "show_on_home": true
+    },
+    {
+      "emoji": "\ud83c\udfbb",
+      "name": "Cello",
+      "description": "Explore the rich tones of the cello in group lessons. Cellos are available for hire ($100/year) for students who don\u2019t yet have their own instrument.",
+      "summary": "Ages 7+. Cellos available for hire.",
+      "tag": "Ages 7+",
+      "free": false,
+      "show_on_home": true
+    },
+    {
+      "emoji": "\ud83c\udfb9",
+      "name": "Keyboard",
+      "description": "Build keyboard skills including reading music, chord progressions, and playing melodies. A popular class \u2014 waitlists may apply.",
+      "summary": "Ages 7+. Waitlists may apply.",
+      "tag": "Ages 7+",
+      "free": false,
+      "show_on_home": true
+    },
+    {
+      "emoji": "\ud83c\udfb8",
+      "name": "Guitar",
+      "description": "Learn acoustic guitar basics including chords, strumming patterns, and simple songs. A very popular class \u2014 waitlists may apply.",
+      "summary": "Ages 7+. Waitlists may apply.",
+      "tag": "Ages 7+",
+      "free": false,
+      "show_on_home": true
+    },
+    {
+      "emoji": "\ud83e\ude88",
+      "name": "Flute",
+      "description": "Develop breath control, tone production, and fingering technique in group flute lessons. Suited to slightly older students who can manage the instrument.",
+      "summary": "Ages 10+. Intermediate-level students welcome.",
+      "tag": "Ages 10+",
+      "free": false,
+      "show_on_home": true
+    },
+    {
+      "emoji": "\ud83c\udfb5",
+      "name": "Recorder",
+      "description": "A wonderful first wind instrument. Students learn music reading, breath control, and ensemble playing through the recorder.",
+      "summary": "Ages 6.5+. A great first instrument.",
+      "tag": "Ages 6.5+",
+      "free": false,
+      "show_on_home": true
+    },
+    {
+      "emoji": "\ud83c\udfba",
+      "name": "Trumpet",
+      "description": "Build embouchure, breath support, and brass playing skills. Students learn together in an encouraging group environment.",
+      "summary": "Ages 8+. Build brass skills.",
+      "tag": "Ages 8+",
+      "free": false,
+      "show_on_home": true
+    },
+    {
+      "emoji": "\ud83e\udd41",
+      "name": "Drums",
+      "description": "Develop rhythm, coordination, and percussion skills. Learn to read rhythmic notation and play a variety of styles and patterns.",
+      "summary": "Ages 7+. Develop rhythm and coordination.",
+      "tag": "Ages 7+",
+      "free": false,
+      "show_on_home": true
+    },
+    {
+      "emoji": "\ud83c\udfa4",
+      "name": "Choir",
+      "description": "Open to all Gallery students at no extra cost! Sing together in a fun, supportive group and perform at the annual concert.",
+      "summary": "Free for all Gallery students!",
+      "tag": "Free!",
+      "free": true,
+      "show_on_home": true
+    },
+    {
+      "emoji": "\ud83c\udfb6",
+      "name": "Ensemble",
+      "description": "For students with approximately 2 years of prior tuition. Play music together in a small group and develop ensemble skills.",
+      "summary": "For students with 2+ years experience.",
+      "tag": "2+ years experience",
+      "free": false,
+      "show_on_home": false
+    },
+    {
+      "emoji": "\ud83c\udfb5",
+      "name": "Orchestra",
+      "description": "For students with approximately 3 years of prior tuition. Open to all ages. See our Community Orchestra page for more details.",
+      "summary": "For students with 3+ years experience.",
+      "tag": "3+ years experience",
+      "free": false,
+      "show_on_home": false
+    }
+  ]
+}

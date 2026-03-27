@@ -104,67 +104,8 @@
           <h2>What We Offer</h2>
           <p>Gallery Music Centre is part of the Ministry of Education's out-of-hours music programme, providing affordable group music lessons for primary and intermediate school-aged children.</p>
         </div>
-        <div class="card-grid card-grid--home">
-          <a href="classes.html" class="card">
-            <div class="card__icon">🎻</div>
-            <h3>Violin</h3>
-            <p>Ages 7+. Learn violin in a supportive group setting.</p>
-            <span class="card__tag">Ages 7+</span>
-          </a>
-          <a href="classes.html" class="card">
-            <div class="card__icon">🎻</div>
-            <h3>Cello</h3>
-            <p>Ages 7+. Cellos available for hire.</p>
-            <span class="card__tag">Ages 7+</span>
-          </a>
-          <a href="classes.html" class="card">
-            <div class="card__icon">🎹</div>
-            <h3>Keyboard</h3>
-            <p>Ages 7+. Waitlists may apply.</p>
-            <span class="card__tag">Ages 7+</span>
-          </a>
-          <a href="classes.html" class="card">
-            <div class="card__icon">🎸</div>
-            <h3>Guitar</h3>
-            <p>Ages 7+. Waitlists may apply.</p>
-            <span class="card__tag">Ages 7+</span>
-          </a>
-          <a href="classes.html" class="card">
-            <div class="card__icon">🪈</div>
-            <h3>Flute</h3>
-            <p>Ages 10+. Intermediate-level students welcome.</p>
-            <span class="card__tag">Ages 10+</span>
-          </a>
-          <a href="classes.html" class="card">
-            <div class="card__icon">🎵</div>
-            <h3>Recorder</h3>
-            <p>Ages 6.5+. A great first instrument.</p>
-            <span class="card__tag">Ages 6.5+</span>
-          </a>
-          <a href="classes.html" class="card">
-            <div class="card__icon">🥁</div>
-            <h3>Drums</h3>
-            <p>Ages 7+. Develop rhythm and coordination.</p>
-            <span class="card__tag">Ages 7+</span>
-          </a>
-          <a href="classes.html" class="card">
-            <div class="card__icon">🎺</div>
-            <h3>Trumpet</h3>
-            <p>Ages 8+. Build brass skills.</p>
-            <span class="card__tag">Ages 8+</span>
-          </a>
-          <a href="classes.html" class="card card--free">
-            <div class="card__icon">🎤</div>
-            <h3>Choir</h3>
-            <p>Free for all Gallery students!</p>
-            <span class="card__tag">Free!</span>
-          </a>
-          <a href="classes.html" class="card">
-            <div class="card__icon">🎼</div>
-            <h3>Music Basics</h3>
-            <p>Ages 5&ndash;7. A fun introduction to music fundamentals.</p>
-            <span class="card__tag">Ages 5&ndash;7</span>
-          </a>
+        <div class="card-grid card-grid--home" id="home-instruments">
+          <!-- loaded from _data/instruments.json -->
         </div>
       </div>
     </section>
@@ -300,55 +241,11 @@
                 <th>Dates</th>
               </tr>
             </thead>
-            <tbody>
-              <!-- TODO: Replace with actual current year term dates -->
-              <tr>
-                <td>Term 1</td>
-                <td>8 lessons</td>
-                <td>8 Feb &ndash; 5 Apr</td>
-              </tr>
-              <tr>
-                <td>Term 2</td>
-                <td>8 lessons</td>
-                <td>3 May &ndash; 28 Jun</td>
-              </tr>
-              <tr>
-                <td>Term 3</td>
-                <td>9 lessons</td>
-                <td>26 Jul &ndash; 20 Sep (includes Annual Concert)</td>
-              </tr>
-              <tr>
-                <td>Term 4</td>
-                <td>8 lessons</td>
-                <td>18 Oct &ndash; 6 Dec</td>
-              </tr>
+            <tbody id="term-dates-body">
+              <!-- loaded from _data/term-dates.json -->
             </tbody>
           </table>
-          <p class="term-note">No classes on public holiday weekends &mdash; see full calendar for details.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Testimonials -->
-    <section class="section">
-      <div class="container">
-        <div class="section-title">
-          <h2>What Parents Say</h2>
-        </div>
-        <!-- TODO: Replace placeholder testimonials with real parent quotes -->
-        <div class="testimonials">
-          <div class="testimonial">
-            <p>My daughter has loved every Saturday morning at Gallery Music. The teachers are wonderful and the fees are so affordable. It's been a fantastic experience for our whole family.</p>
-            <span class="testimonial__author">&mdash; Parent of a violin student</span>
-          </div>
-          <div class="testimonial">
-            <p>We were looking for music lessons that wouldn't break the bank. Gallery Music Centre has been perfect &mdash; great teaching, friendly community, and our son can't wait for Saturday mornings.</p>
-            <span class="testimonial__author">&mdash; Parent of a keyboard student</span>
-          </div>
-          <div class="testimonial">
-            <p>The annual concert was such a highlight. Seeing the kids perform together after a year of learning was really special. Highly recommend Gallery to any family in the Hutt Valley.</p>
-            <span class="testimonial__author">&mdash; Parent of a cello student</span>
-          </div>
+          <p class="term-note" id="term-dates-note"></p>
         </div>
       </div>
     </section>
@@ -410,6 +307,7 @@
     </div>
   </footer>
 
+  <script src="js/content.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>

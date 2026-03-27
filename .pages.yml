@@ -6,94 +6,159 @@ media:
     extensions: [svg, png, jpg, jpeg, webp, gif]
 
 content:
-  - name: home_page
-    label: Home Page
-    type: file
-    path: index.html
-    format: raw
-    fields:
-      - name: body
-        label: Home HTML
-        type: code
-        description: Edit the full home page HTML. Content is currently embedded directly in this file.
-        options:
-          language: html
 
-  - name: classes_page
-    label: Classes Page
-    type: file
-    path: classes.html
-    format: raw
-    fields:
-      - name: body
-        label: Classes HTML
-        type: code
-        description: Edit the full classes page HTML.
-        options:
-          language: html
+  # ── Most frequently updated ──────────────────────────────────────────────────
 
-  - name: orchestra_page
-    label: Orchestra Page
+  - name: term_dates
+    label: "Term Dates"
     type: file
-    path: orchestra.html
-    format: raw
+    path: _data/term-dates.json
+    format: json
     fields:
-      - name: body
-        label: Orchestra HTML
-        type: code
-        description: Edit the full orchestra page HTML.
-        options:
-          language: html
+      - name: terms
+        label: Terms
+        type: list
+        fields:
+          - name: name
+            label: Term
+            type: string
+            description: "e.g. Term 1"
+          - name: lessons
+            label: Number of lessons
+            type: string
+            description: "e.g. 8 lessons"
+          - name: dates
+            label: Dates
+            type: string
+            description: "e.g. 8 Feb – 5 Apr  (or include a note like 'includes Annual Concert')"
+      - name: note
+        label: Note below the table
+        type: string
+        description: "Small reminder shown under the term dates table, e.g. 'No classes on public holiday weekends'"
 
-  - name: about_page
-    label: About Page
+  - name: faqs
+    label: "FAQs"
     type: file
-    path: about.html
-    format: raw
+    path: _data/faqs.json
+    format: json
     fields:
-      - name: body
-        label: About HTML
-        type: code
-        description: Edit the full about page HTML.
-        options:
-          language: html
+      - name: faqs
+        label: Questions & Answers
+        type: list
+        fields:
+          - name: question
+            label: Question
+            type: string
+          - name: answer
+            label: Answer
+            type: text
+            description: "Plain text answer. Update prices, waitlist notes, and other details here."
 
-  - name: enrol_page
-    label: Enrol Page
-    type: file
-    path: enrol.html
-    format: raw
-    fields:
-      - name: body
-        label: Enrol HTML
-        type: code
-        description: Edit the full enrolment page HTML.
-        options:
-          language: html
+  # ── Occasionally updated ─────────────────────────────────────────────────────
 
-  - name: site_styles
-    label: Site Styles
+  - name: teachers
+    label: "Teachers"
     type: file
-    path: css/style.css
-    format: raw
+    path: _data/teachers.json
+    format: json
     fields:
-      - name: body
-        label: CSS
-        type: code
-        description: Shared stylesheet used across the entire site.
+      - name: teachers
+        label: Teachers
+        type: list
+        fields:
+          - name: name
+            label: Full name
+            type: string
+          - name: role
+            label: Instruments / role
+            type: string
+            description: "e.g. Cello  or  Guitar & Keyboard"
+          - name: bio
+            label: Bio
+            type: text
+            description: "1–2 sentences. Leave blank to hide."
 
-  - name: site_scripts
-    label: Site Scripts
+  - name: committee
+    label: "Committee"
     type: file
-    path: js/main.js
-    format: raw
+    path: _data/committee.json
+    format: json
     fields:
-      - name: body
-        label: JavaScript
-        type: code
-        description: Shared front-end JavaScript for navigation and form behavior.
-        options:
-          language: javascript
+      - name: committee
+        label: Committee members
+        type: list
+        fields:
+          - name: name
+            label: Name
+            type: string
+            description: "Full name, or leave as 'Committee Member' if not yet confirmed"
+          - name: role
+            label: Role
+            type: string
+            description: "e.g. Chairperson, Secretary, Treasurer, Gallery Coordinator"
+          - name: bio
+            label: Bio (optional)
+            type: text
+            description: "Short bio. Leave blank to hide."
+
+  - name: instruments
+    label: "Instrument Classes"
+    type: file
+    path: _data/instruments.json
+    format: json
+    fields:
+      - name: instruments
+        label: Instruments
+        type: list
+        fields:
+          - name: name
+            label: Name
+            type: string
+          - name: emoji
+            label: Icon (emoji)
+            type: string
+            description: "Single emoji, e.g. 🎻"
+          - name: summary
+            label: Short description (Home page)
+            type: string
+            description: "One sentence shown on the home page grid, e.g. 'Ages 7+. Waitlists may apply.'"
+          - name: description
+            label: Full description (Classes page)
+            type: text
+            description: "Full paragraph shown on the Classes page. Include hire costs, waitlist notes, etc."
+          - name: tag
+            label: Age / tag badge
+            type: string
+            description: "e.g. Ages 7+   or   Free!   or   2+ years experience"
+          - name: free
+            label: Free class?
+            type: boolean
+            description: "Turn on for classes with no extra cost (e.g. Choir). Shows a highlighted card."
+          - name: show_on_home
+            label: Show on Home page?
+            type: boolean
+            description: "Should this instrument appear in the grid on the home page?"
+
+  # ── When you have testimonials ready ─────────────────────────────────────────
+
+  - name: testimonials
+    label: "Testimonials (What Parents Say)"
+    type: file
+    path: _data/testimonials.json
+    format: json
+    fields:
+      - name: testimonials
+        label: Testimonials
+        type: list
+        fields:
+          - name: quote
+            label: Quote
+            type: text
+            description: "The parent's words — no quotation marks needed."
+          - name: author
+            label: Attribution
+            type: string
+            description: "e.g. Parent of a violin student"
 
 settings:
   hide: true
