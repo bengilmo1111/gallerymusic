@@ -5,7 +5,7 @@
    ============================================ */
 
 (function () {
-  const DATA = '_data/';
+  const DATA = 'data/';
 
   function fetchJSON(file) {
     return fetch(DATA + file).then(function (r) {

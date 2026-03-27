@@ -14,7 +14,7 @@ content:
   - name: home_term_dates
     label: "🏠 Home — Term Dates"
     type: file
-    path: _data/term-dates.json
+    path: data/term-dates.json
     format: json
     fields:
       - name: terms
@@ -45,7 +45,7 @@ content:
   - name: home_site_settings
     label: "🏠 Home — Stats & Site Settings"
     type: file
-    path: _data/site-settings.json
+    path: data/site-settings.json
     format: json
     fields:
       - name: stats
@@ -88,7 +88,7 @@ content:
   - name: classes_instruments
     label: "📖 Classes — Instrument Classes"
     type: file
-    path: _data/instruments.json
+    path: data/instruments.json
     format: json
     fields:
       - name: instruments
@@ -130,7 +130,7 @@ content:
   - name: classes_faqs
     label: "📖 Classes — FAQs"
     type: file
-    path: _data/faqs.json
+    path: data/faqs.json
     format: json
     fields:
       - name: faqs
@@ -156,7 +156,7 @@ content:
   - name: orchestra_details
     label: "🎻 Orchestra — Practical Details"
     type: file
-    path: _data/orchestra-details.json
+    path: data/orchestra-details.json
     format: json
     fields:
       - name: when
@@ -189,7 +189,7 @@ content:
   - name: about_teachers
     label: "👥 About — Teachers"
     type: file
-    path: _data/teachers.json
+    path: data/teachers.json
     format: json
     fields:
       - name: teachers
@@ -215,7 +215,7 @@ content:
   - name: about_committee
     label: "👥 About — Committee"
     type: file
-    path: _data/committee.json
+    path: data/committee.json
     format: json
     fields:
       - name: committee
@@ -246,7 +246,7 @@ content:
   - name: testimonials
     label: "💬 Testimonials (add when you have real quotes)"
     type: file
-    path: _data/testimonials.json
+    path: data/testimonials.json
     format: json
     fields:
       - name: testimonials
