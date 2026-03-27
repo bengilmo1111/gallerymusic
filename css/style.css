@@ -140,6 +140,28 @@ h4 { font-size: var(--fs-lg); }
   color: var(--color-white);
 }
 
+/* --- Site Banner --- */
+.site-banner {
+  background: var(--color-accent);
+  color: #3a2800;
+  text-align: center;
+  padding: 10px var(--space-lg);
+  font-size: var(--fs-sm);
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.site-banner a {
+  color: #3a2800;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.site-banner[hidden] {
+  display: none;
+}
+
 /* --- Utility --- */
 .container {
   width: 100%;

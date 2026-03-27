@@ -83,6 +83,18 @@
     }).join('');
   }
 
+  /* --- Site Banner (all pages) --- */
+  function renderBanner(data) {
+    var el = document.getElementById('site-banner');
+    if (!el || !data.enabled) return;
+    var content = escapeHTML(data.message || '');
+    if (data.link_url && data.link_text) {
+      content += ' <a href="' + escapeHTML(data.link_url) + '" target="_blank" rel="noopener noreferrer">' + escapeHTML(data.link_text) + '</a>';
+    }
+    el.innerHTML = content;
+    el.removeAttribute('hidden');
+  }
+
   /* --- Stat Cards (home page) --- */
   function renderStats(data) {
     var container = document.getElementById('key-stats');
@@ -123,6 +135,9 @@
 
   /* --- Init: only load what the current page needs --- */
   document.addEventListener('DOMContentLoaded', function () {
+    // Banner loads on every page
+    fetchJSON('banner.json').then(renderBanner).catch(console.error);
+
     var needs = {
       termDates:          !!(document.getElementById('term-dates-body') || document.getElementById('term-dates-note')),
       testimonials:       !!document.getElementById('testimonials-container'),

@@ -8,6 +8,33 @@ media:
 content:
 
   # ═══════════════════════════════════════════════
+  #  🔔  SITE-WIDE
+  # ═══════════════════════════════════════════════
+
+  - name: site_banner
+    label: "🔔 Site Banner (all pages)"
+    type: file
+    path: data/banner.json
+    format: json
+    fields:
+      - name: enabled
+        label: Show banner?
+        type: boolean
+        description: "Turn on to display the banner at the top of every page. Turn off to hide it."
+      - name: message
+        label: Message
+        type: string
+        description: "The text shown in the banner. e.g. Our annual concert is coming up on the 25th of July."
+      - name: link_text
+        label: Link text (optional)
+        type: string
+        description: "e.g. Click here for details — leave blank for no link"
+      - name: link_url
+        label: Link URL (optional)
+        type: string
+        description: "Full URL including https:// — leave blank for no link"
+
+  # ═══════════════════════════════════════════════
   #  🏠  HOME PAGE
   # ═══════════════════════════════════════════════
 
