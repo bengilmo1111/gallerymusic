@@ -1,8 +1,21 @@
+# ── Dependencies & tooling ────────────────────────────────
 .npm-cache/
 node_modules/
+*.log
+
+# ── Test & build output ───────────────────────────────────
+output/
 playwright-report/
 test-results/
-output/playwright/
-*.log
+
+# ── Local planning & design docs ─────────────────────────
+Phase1Requirements.md
+art_direction.md
 TODO.md
 progress.md
+references/
+tests/
+
+# ── Editor & tool config (local only) ────────────────────
+.claude/
+.sfdx/
