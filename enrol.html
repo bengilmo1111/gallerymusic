@@ -85,92 +85,13 @@
             </ul>
           </div>
 
-          <!-- Enrolment Form -->
-          <form id="enrolment-form" action="mailto:administration@gallerymusic.org" method="post" enctype="text/plain" novalidate>
-
-            <h2 style="margin-bottom: var(--space-xl);">Enrolment Details</h2>
-
-            <div class="form-group">
-              <label for="parent_name">Parent's Name <span class="required">*</span></label>
-              <input type="text" id="parent_name" name="parent_name" required autocomplete="name">
-              <span class="error-message">This field is required</span>
-            </div>
-
-            <div class="form-group">
-              <label for="contact_email">Contact Email <span class="required">*</span></label>
-              <input type="email" id="contact_email" name="contact_email" required autocomplete="email">
-              <span class="error-message">Please enter a valid email address</span>
-            </div>
-
-            <div class="form-group">
-              <label for="contact_phone">Contact Phone Number</label>
-              <input type="tel" id="contact_phone" name="contact_phone" autocomplete="tel">
-            </div>
-
-            <div class="form-group">
-              <label for="child_dob">Child's Date of Birth <span class="required">*</span></label>
-              <input type="date" id="child_dob" name="child_dob" required>
-              <span class="error-message">This field is required</span>
-            </div>
-
-            <div class="form-group">
-              <label for="preferred_instrument">Preferred Instrument <span class="required">*</span></label>
-              <select id="preferred_instrument" name="preferred_instrument" required>
-                <option value="">Select an instrument...</option>
-                <option value="Music Basics">Music Basics (Ages 5-7)</option>
-                <option value="Violin">Violin (Ages 7+)</option>
-                <option value="Cello">Cello (Ages 7+)</option>
-                <option value="Keyboard">Keyboard (Ages 7+)</option>
-                <option value="Guitar">Guitar (Ages 7+)</option>
-                <option value="Flute">Flute (Ages 10+)</option>
-                <option value="Recorder">Recorder (Ages 6.5+)</option>
-                <option value="Trumpet">Trumpet (Ages 7+)</option>
-                <option value="Drums">Drums (Ages 7+)</option>
-                <option value="Choir">Choir (Free)</option>
-                <option value="Ensemble">Ensemble (2+ years experience)</option>
-                <option value="Orchestra">Orchestra (3+ years experience)</option>
-              </select>
-              <span class="error-message">Please select an instrument</span>
-            </div>
-
-            <div class="form-group">
-              <label for="second_preference">Second Preference</label>
-              <select id="second_preference" name="second_preference">
-                <option value="">No second preference</option>
-                <option value="Music Basics">Music Basics (Ages 5-7)</option>
-                <option value="Violin">Violin (Ages 7+)</option>
-                <option value="Cello">Cello (Ages 7+)</option>
-                <option value="Keyboard">Keyboard (Ages 7+)</option>
-                <option value="Guitar">Guitar (Ages 7+)</option>
-                <option value="Flute">Flute (Ages 10+)</option>
-                <option value="Recorder">Recorder (Ages 6.5+)</option>
-                <option value="Trumpet">Trumpet (Ages 7+)</option>
-                <option value="Drums">Drums (Ages 7+)</option>
-                <option value="Choir">Choir (Free)</option>
-                <option value="Ensemble">Ensemble (2+ years experience)</option>
-                <option value="Orchestra">Orchestra (3+ years experience)</option>
-              </select>
-            </div>
-
-            <div class="form-group">
-              <label for="anything_else">Additional Notes (optional)</label>
-              <textarea id="anything_else" name="anything_else" rows="4" placeholder="Anything else you'd like us to know"></textarea>
-            </div>
-
-            <div class="form-submit">
-              <button type="submit" class="btn btn--primary">Submit Enrolment</button>
-            </div>
-
-          </form>
-
-          <!-- Thank You Message -->
-          <div class="thank-you" aria-live="polite">
-            <h2>Thank you!</h2>
-            <p>We've received your enrolment interest. Your email client should have opened with the details &mdash; please send the email to complete your submission.</p>
-            <p style="margin-top: var(--space-md);">We'll be in touch soon to confirm placement and next steps.</p>
-            <p style="margin-top: var(--space-md); color: var(--color-text-light); font-size: var(--fs-sm);">
-              If you have questions, contact <a href="mailto:administration@gallerymusic.org">administration@gallerymusic.org</a>
-            </p>
+          <!-- Enrolment Form (Google Forms) -->
+          <div class="gform-wrapper">
+            <iframe
+              src="https://docs.google.com/forms/d/e/1FAIpQLSf96FXU2mXLJG3yowtAc599F65T_r1wj31ne8z9HjeDIss-aA/viewform?embedded=true"
+              title="Enrolment Form"
+              loading="lazy"
+            >Loading&hellip;</iframe>
           </div>
 
         </div>
