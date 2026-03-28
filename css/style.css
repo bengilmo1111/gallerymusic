@@ -330,7 +330,7 @@ h4 { font-size: var(--fs-lg); }
 .nav__links a.nav__enrol {
   background: var(--color-accent);
   color: var(--color-white) !important;
-  padding: 0.65rem 0.5rem;
+  padding: 0.45rem 1.1rem;
   border-radius: var(--radius-md);
   font-weight: 600;
   line-height: 1.2;
@@ -1782,7 +1782,7 @@ h4 { font-size: var(--fs-lg); }
   .nav__links a.nav__enrol {
     text-align: center;
     margin-top: var(--space-md);
-    padding: 0.65rem 0.5rem;
+    padding: 0.45rem 1.1rem;
     display: inline-flex;
     align-items: center;
     justify-content: center;
