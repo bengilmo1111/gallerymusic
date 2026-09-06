@@ -1,11 +1,11 @@
 {
   "committee": [
     {
-      "name": "Nicky Sievert",
+      "name": "Zoe Gilmore",
       "role": "Chairperson"
     },
     {
-      "name": "Zoe Gilmore",
+      "name": "Nicky Bank",
       "role": "Secretary"
     },
     {
@@ -13,23 +13,11 @@
       "role": "Committee Member"
     },
     {
-      "name": "Kiran Rajan",
-      "role": "Committee Member"
-    },
-    {
-      "name": "Kiri Sharpe",
-      "role": "Committee Member"
-    },
-    {
-      "name": "Nicky Bank",
-      "role": "Committee Member"
-    },
-    {
-      "name": "Sukrit Patil",
-      "role": "Committee Member"
-    },
-    {
       "name": "Susant Acharya",
+      "role": "Committee Member"
+    },
+    {
+      "name": "Kogulan Nadarajah",
       "role": "Committee Member"
     }
   ]
